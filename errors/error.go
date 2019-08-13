@@ -14,7 +14,7 @@ import (
 	"log"
 )
 
-// CheckErr function to responde with appropriate error messages
+// CheckErr logs error messages and exits if necessary
 func CheckErr(err error, code int, optMsg string) {
 	if err != nil {
 		switch code {
@@ -53,6 +53,8 @@ func CheckErr(err error, code int, optMsg string) {
 		case 206:
 			// Do not want to exit if this is thrown
 			log.Print("DELETE_FILE_ERROR", "[", code, "]: ", err, ". ", optMsg)
+		// case 207:
+		// 	log.Fatalf("READ_FILE_ERROR [%d]: %q. %s", code, err, optMsg)
 		case 300:
 			log.Fatal("APPLICATION_ERROR", "[", code, "]: ", err, ". ", optMsg)
 		default:

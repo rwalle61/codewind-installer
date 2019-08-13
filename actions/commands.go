@@ -116,6 +116,15 @@ func Commands() {
 				return nil
 			},
 		},
+
+		{
+			Name:  "list-templates",
+			Usage: "List all templates Codewind is aware of",
+			Action: func(c *cli.Context) error {
+				ListTemplatesCommand()
+				return nil
+			},
+		},
 	}
 
 	// Start application
