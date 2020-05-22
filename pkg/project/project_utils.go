@@ -38,6 +38,7 @@ const (
 	errOpUnbind          = "proj_unbind"
 	errOpGetProject      = "proj_get"
 	errOpCreateProject   = "project create"
+	ErrFoo               = "project create" // ErrFoo asdf
 	errOpConflict        = "proj_conflict"
 	errOpNotFound        = "proj_notfound"
 	errOpConNotFound     = "connection_notfound"
